@@ -8,3 +8,9 @@ Python Memo : 파이썬 관련 메모
 *Code*
 ===
 * rm(list=ls()) : 모든 변수 삭제
+* NA(결측치)가 N/A로 character로 들어가있는 경우
+    * "N/A" 문자 포함된 행 모두 제거
+    ```
+    for(i in 1:ncol(a)){
+        a<-a[a[,i]!="N/A",] }
+    ```
