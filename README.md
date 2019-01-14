@@ -14,3 +14,20 @@ Python Memo : 파이썬 관련 메모
     for(i in 1:ncol(a)){
         a<-a[a[,i]!="N/A",] }
     ```
+* 오름차순, 내림차순 sort
+    * 기본
+    ```
+    sort(v1) # 오름차순 정렬
+    sort(v1, decreasing = TRUE) # 내림차순 정렬
+    ```
+    * 응용1 : No using package
+    ```
+    data[order(data$v1),]  # v1 기준으로 data 오름차순
+    data[rev(order(data$v1)),] # v1 기준으로 data 내림차순
+    ```
+    * 응용2 : Using package
+    ```
+    library(dplyr)
+    arrange(data,v1) # v1 기준으로 data 오름차순
+    arrange(data,desc(v1)) # v1 기준으로 data 내림차순
+    ```
