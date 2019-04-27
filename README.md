@@ -36,7 +36,9 @@ Python Memo : 파이썬 관련 메모
     * 1 : ``` `%not_in%` <- purrr::negate(`%in%`) ```
     * 2 : ` setdiff(D1, D0) `
 
-* 여러개의 변수 한번에 생성하기
+* 여러개의 변수 한번에 생성하기(for 문)
     * ```for(i in 1:12){
         assign(paste0('NRU',i),c()) }
     ```
+* for문을 사용할 때 사용하는 여러 변수 불러오기
+    * get(paste0('kk',3))
