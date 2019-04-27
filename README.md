@@ -31,3 +31,7 @@ Python Memo : 파이썬 관련 메모
     arrange(data,v1) # v1 기준으로 data 오름차순
     arrange(data,desc(v1)) # v1 기준으로 data 내림차순
     ```
+
+* Not in <-> %in% 의 반대
+    * ` `%not_in%` <- purrr::negate(`%in%`) `
+
