@@ -35,4 +35,8 @@ Python Memo : 파이썬 관련 메모
 * Not in <-> %in% 의 반대
     * 1 : ``` `%not_in%` <- purrr::negate(`%in%`) ```
     * 2 : ` setdiff(D1, D0) `
- 
+
+* 여러개의 변수 한번에 생성하기
+    * ```for(i in 1:12){
+        assign(paste0('NRU',i),c()) }
+    ```
