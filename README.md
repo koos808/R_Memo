@@ -33,5 +33,6 @@ Python Memo : 파이썬 관련 메모
     ```
 
 * Not in <-> %in% 의 반대
-    * ` `%not_in%` <- purrr::negate(`%in%`) `
-
+    * 1 : ` `%not_in%` <- purrr::negate(`%in%`) `
+    * 2 : ` setdiff(D1, D0) `
+ 
