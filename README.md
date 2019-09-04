@@ -90,18 +90,18 @@ R Scripts Memo : R Scripts 관련 메모
         item_li<-unique(data$ITEM)
         tot<-data.table()
   
-    for(i in 1:length(item_li)){
-     tmp<-data[ITEM==item_li[i]]
+        for(i in 1:length(item_li)){
+            tmp<-data[ITEM==item_li[i]]
+        
         for(m in 1:nrow(tmp)){
           if(tmp[1,]$QTY==0){
             tmp=tmp[-1,]
-        }else{
-         break
-        }
-     }
+            }else{
+                break
+                }
+                }
         tot<-rbind(tot,tmp)
         }
-
         ```
 
 * GGplot 혹은 R Plot 결과 pdf로 저장하기
