@@ -138,7 +138,7 @@ R Scripts Memo : R Scripts 관련 메모
         ```
 
     * Short version.2
-        * ` colsplit(data_with_info$SKU, "\\.", names = c("ITEM", "suffix"))[,1] `
+        ` colsplit(data_with_info$SKU, "\\.", names = c("ITEM", "suffix"))[,1] `
 
 * 문자열 대소문자, 일괄 바꾸기
     * 
