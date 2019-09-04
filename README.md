@@ -121,18 +121,69 @@ R Scripts Memo : R Scripts 관련 메모
           }
     dev.off()
     ```
+* 캐릭터 타입의 컬럼에서 Split하여 새로운 변수로 추가하기
+    * Long version
+        * 
+        ```
+        aka<-strsplit(data$SKU,split = ".",fixed=T)
+        aka2<-data.frame(unlist(aka))
+        aka2$unlist.aka.<-as.character(aka2$unlist.aka.)
+        aka3<-aka2[seq(1,nrow(aka2), by = 2),]
+        nl$ITEM<-aka3
+        ```
+    * Short version.1
+        *
+        ```
+        a<-unlist(strsplit(data$SKU,".",fixed = T))
+        data$ITEM<-a[seq(1,length(a),by=2)]
+        ```
+
+    * Short version.2
+        * ` colsplit(data_with_info$SKU, "\\.", names = c("ITEM", "suffix"))[,1] `
+
+* 문자열 대소문자, 일괄 바꾸기
+    * 
+    ```
+    x <- "MiXeD cAsE 123"
+    chartr("iXs", "why", x)
+    chartr("a-cX", "D-Fw", x)
+    tolower(x)
+    toupper(x) 
+    ```
 
 *함수*
 ===
 * sprintf() : 문자열을 매개변수 width 길이로 만들고, 빈 자리는 '0'으로 채우기
-    * ex 1) ` sprintf("%05d", var) `
-    * ex 2) ` sprintf(".5f", var) `
+    * ex1) ` sprintf("%05d", var) `
+    * ex2) ` sprintf(".5f", var) `
 
 * assign & get
-    * ex1 1)  
+    * ex1)  
     ```
     for(i in 1:length(dc_list)){
         assign(dc_list[i],value = dcsell[DC==dc_list[i]])   }
     ```
-    * ex 2) ` assign('ins',readline('Insert:')) `
-    * ex 3) ` get(dc_list[1]) `
+    * ex2) ` assign('ins',readline('Insert:')) `
+    * ex3) ` get(dc_list[1]) `
+
+* data.table  - apply(), sum(), aggregate()
+    * 1. apply 
+        * ex) ` lapply(.SD , sum) `
+    * 2. 집계함수 aggregate()
+        * ex) `aggregate(. ~ VMI_ORG_CODE+Snapshot_Week, data = a1, FUN=sum) `
+    * 3. JOIN
+        * ex1) different key `merge(raw_data, GP, by.x ="GP_key",by.y = "Week", all.x=TRUE)`
+        * ex2) double key :  `merge(set_A1, set_A2, by = c("MODEL","TIMESTAMP"), all=TRUE)`
+    * 4. 정렬
+        * ex) ` DT[order(cola)] `
+    * 5. group_by
+        * ex) ` DT[, , by=cola] ` 
+    * 6. mutate
+        * ex) ` DT[, colc := cola * colb ] `
+    * 7. transmute
+        * ex) ` DT[, .(colc = cola * colb)] ` 
+    * 8. filter
+        * ex) ` ET[cola == 3] `
+
+
+
