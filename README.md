@@ -125,4 +125,14 @@ R Scripts Memo : R Scripts 관련 메모
 *함수*
 ===
 * sprintf() : 문자열을 매개변수 width 길이로 만들고, 빈 자리는 '0'으로 채우기
-    * ex) ` sprintf("%05d", var) `
+    * ex 1) ` sprintf("%05d", var) `
+    * ex 2) ` sprintf(".5f", var) `
+
+* assign & get
+    * ex1 1)  
+    ```
+    for(i in 1:length(dc_list)){
+        assign(dc_list[i],value = dcsell[DC==dc_list[i]])   }
+    ```
+    * ex 2) ` assign('ins',readline('Insert:')) `
+    * ex 3) ` get(dc_list[1]) `
