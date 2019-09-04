@@ -132,7 +132,7 @@ R Scripts Memo : R Scripts 관련 메모
         nl$ITEM<-aka3
         ```
     * Short version.1
-        *
+        * 
         ```
         a<-unlist(strsplit(data$SKU,".",fixed = T))
         data$ITEM<-a[seq(1,length(a),by=2)]
