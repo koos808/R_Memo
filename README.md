@@ -123,8 +123,8 @@ R Scripts Memo : R Scripts 관련 메모
     ```
 
 * 캐릭터 타입의 컬럼에서 Split하여 새로운 변수로 추가하기
-    * Long version
-        *  ```
+    * Long version 
+        ```
         aka<-strsplit(data$SKU,split = ".",fixed=T)
         aka2<-data.frame(unlist(aka))
         aka2$unlist.aka.<-as.character(aka2$unlist.aka.)
@@ -132,7 +132,7 @@ R Scripts Memo : R Scripts 관련 메모
         nl$ITEM<-aka3
         ```
     * Short version.1
-        * ```
+        ```
         a<-unlist(strsplit(data$SKU,".",fixed = T))
         data$ITEM<-a[seq(1,length(a),by=2)]
         ```
