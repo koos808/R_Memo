@@ -84,26 +84,22 @@ R Scripts Memo : R Scripts 관련 메모
     * 예시 Code 2 
         * 열 기준으로 첫 행 데이터가 결측치 인 경우 제거
         * 열 기준 NA값으로 시작하지 않기
-    ```
-  # 첫수요 발생시점까지 QTY 0 삭제
-  item_li<-unique(data$ITEM)
+        * ```
+        첫수요 발생시점까지 QTY 0 삭제
+        item_li<-unique(data$ITEM)
+        tot<-data.table()
   
-  tot<-data.table()
-  
-  for(i in 1:length(item_li)){
-    tmp<-data[ITEM==item_li[i]]
-    
-    for(m in 1:nrow(tmp)){
-      if(tmp[1,]$QTY==0){
-        tmp=tmp[-1,]
-      }else{
-        break
-      }
-    }
-    
-    tot<-rbind(tot,tmp)
-    
-  }
+    for(i in 1:length(item_li)){
+     tmp<-data[ITEM==item_li[i]]
+        for(m in 1:nrow(tmp)){
+          if(tmp[1,]$QTY==0){
+            tmp=tmp[-1,]
+        }else{
+         break
+        }
+     }
+        tot<-rbind(tot,tmp)
+        }
 
     ```
 
