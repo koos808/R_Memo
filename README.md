@@ -107,4 +107,25 @@ R Scripts Memo : R Scripts 관련 메모
 
     ```
 
+* GGplot 혹은 R Plot 결과 pdf로 저장하기
+    * 
+    ```
+    pdf(paste0("C:/Users/NURI-0022/Documents/JM/NL_product_predict/",model_flag[i],".pdf"),width = 12,height = 10)
+    
+    for(j in 1:length(item_li)){
+  
+  print(melt(dat_2018 , id.vars = c("ITEM","Fcst_month") , measure.vars =  c("Fcst","ACT")) %>%
+          filter(ITEM == item_li[j]) %>%
+          ggplot(aes(x=Fcst_month,y=value,group=variable,colour=variable))+
+          geom_line()+
+          theme(axis.text.x = element_text(angle=45 , hjust = 1 , size = 10))+
+          ggtitle(item_li[j]))
+          
+          }
+    dev.off()
+    ```
 
+*함수*
+===
+* sprintf() : 문자열을 매개변수 width 길이로 만들고, 빈 자리는 '0'으로 채우기
+    * ex) ` sprintf("%05d", var) `
