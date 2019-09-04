@@ -185,4 +185,48 @@ R Scripts Memo : R Scripts 관련 메모
         * ex) ` ET[cola == 3] `
 
 
+*ETC*
+===
+# Linux Command
+* 사용 tool MobaXterm
+    * `shell  __file__ ` or ` python "__file__" `
+* `htop` : 서버 사용량 확인
+* 커멘드로 파일 또는 폴더 지우기
+    * ` rm -r-f /home/desktop/folder/file `
+* `cd` : 경로 이동
+* sh 파일 실행
+    * ` ./train.sh 20190622 20190702 12 `
+* 파일 & 폴더 복사
+    * 폴더 전체를 복사 : foler_1을 foler_2로 복사
+        * ` cp -R /home/desktop/folder_1 /home/desktop/folder_2 `
+    * 폴더 하위 파일들을 복사 : foler_1의 하위 폴더들을 folder_2에 복사
+        * ` cp -R /home/desktop/folder/file/. /home/desktop/folder_2 `
+* Process 종료
+    * kill -9 35221(해당 프로세스 name) or `ctrl + Shift + C`
+
+
+# 리눅스 GIT Command
+* git clone(복사) : cd로 원하는 폴더 이동 후 Command 입력
+    * ` git clone  http://----.git(주소 복사) commit/ ` 주소의 git을 commit 폴더로 복사
+* Commit
+    * 1.global setting
+        * ex) ( 유저네임 , email ,비밀번호)
+        ` git config --global user.email "koos.gu@--.com" `
+        ` git config --global user.name "koos.gu" `
+    * 2.커밋 폴더로 경로 이동 `cd` 사용
+    * 3.log 확인
+        * `git log` or ` git log -1 `
+        * `git status`
+    * 4.Add
+        * `git add scripts/SFA_XGboost.R scripts/Xgboost.R`
+    * 5.Commit
+        * `git commit`
+    * 6.Push
+        * `git push origin master`
+
+
+
+
+
+
 
