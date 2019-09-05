@@ -149,6 +149,9 @@ R Scripts Memo : R Scripts 관련 메모
     tolower(x)
     toupper(x) 
     ```
+* 한줄이면 끝나는 여러 패키지 불러오기(library many packages)
+    * step1 - ` to_install <- c("arules","catboost","caTools","data.table","doParallel","xgboost" `
+    * step2 - ` lapply(to_install, library, character.only = TRUE) `
 
 *함수*
 ===
