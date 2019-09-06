@@ -186,6 +186,8 @@ R Scripts Memo : R Scripts 관련 메모
         * ex) ` DT[, .(colc = cola * colb)] ` 
     * 8. filter
         * ex) ` ET[cola == 3] `
+    * 9. Accessing columns in data.table using a character vector of column names(열 이름으로 선택)
+        * `av<-grep("Fcst1",colnames(kk),value = T)` => `kk[,av,with=FALSE]`
 
 
 *ETC*
