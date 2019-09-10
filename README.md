@@ -152,6 +152,35 @@ R Scripts Memo : R Scripts 관련 메모
 * 한줄이면 끝나는 여러 패키지 불러오기(library many packages)
     * step1 - ` to_install <- c("arules","catboost","caTools","data.table","doParallel","xgboost" `
     * step2 - ` lapply(to_install, library, character.only = TRUE) `
+* 컴퓨터/서버에 설치되어 있는 R Packages Version 간편하게 확인하기
+    * 
+    ```
+    session <- sessionInfo()
+
+    # Other Packages version
+    otherpkg_version<-data.table()
+    otherpkg_list<-names(session$otherPkgs)
+
+    for(i in 1:length(otherpkg_list)){
+    set<-cbind(otherpkg_list[i],session$otherPkgs[otherpkg_list[i]][[1]]$Version)
+    otherpkg_version<-rbind(otherpkg_version,set)
+    }
+    colnames(otherpkg_version) = c("Packages","Version")
+
+    # LoadedOnly Packages version
+
+    loadpkg_version<-data.table()
+    load_list<-names(session$loadedOnly)
+
+    for(i in 1:length(load_list)){
+    set<-cbind(load_list[i],session$loadedOnly[load_list[i]][[1]]$Version)
+    loadpkg_version<-rbind(loadpkg_version,set)
+    }
+
+    colnames(loadpkg_version) = c("Packages","Version")
+
+    totalpkg_version<-rbind(otherpkg_version,loadpkg_version)
+    ```
 
 *함수*
 ===
