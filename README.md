@@ -181,6 +181,8 @@ R Scripts Memo : R Scripts 관련 메모
 
     totalpkg_version<-rbind(otherpkg_version,loadpkg_version)
     ```
+* 리스트 병합 : merge
+    * `all_model_merged = Reduce(function(...) merge(..., all.x = TRUE, by = c("MODEL","date")), SFA_list)`
 
 *함수*
 ===
