@@ -183,6 +183,8 @@ R Scripts Memo : R Scripts 관련 메모
     ```
 * 리스트 병합 : merge
     * `all_model_merged = Reduce(function(...) merge(..., all.x = TRUE, by = c("MODEL","date")), SFA_list)`
+* 문자열 중 원하는 문자로 시작하는 데이터만 추출
+    * `filename[str_detect(filename,'^train')]` => filename 벡터에서 train으로 시작하는 문자만 뽑겠다. 
 
 *함수*
 ===
