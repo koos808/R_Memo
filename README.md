@@ -185,6 +185,12 @@ R Scripts Memo : R Scripts 관련 메모
     * `all_model_merged = Reduce(function(...) merge(..., all.x = TRUE, by = c("MODEL","date")), SFA_list)`
 * 문자열 중 원하는 문자로 시작하는 데이터만 추출
     * `filename[str_detect(filename,'^train')]` => filename 벡터에서 train으로 시작하는 문자만 뽑겠다. 
+* write.csv/fwrite 하기 전 폴더 없으면 생성하라는 코드 : 폴더 생성 code
+    * 
+    ```
+    if(!dir.exists(file.path(paste0(out_path,STORE,"_",DC,"_",product)))) {
+        dir.create(file.path(paste0(out_path,STORE,"_",DC,"_",product)),recursive = T, mode = "0777") }
+    ```
 
 *함수*
 ===
