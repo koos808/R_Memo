@@ -261,6 +261,7 @@ R Scripts Memo : R Scripts 관련 메모
         * `git commit`
     * 6.Push
         * `git push origin master`
+* 이 페이지 참고하면 좋음 : http://rogerdudler.github.io/git-guide/index.ko.html
 
 
 
