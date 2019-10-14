@@ -258,6 +258,7 @@ R Scripts Memo : R Scripts 관련 메모
         ` git config --global user.email "koos.gu@--.com" `
         ` git config --global user.name "koos.gu" `
     * 2.커밋 폴더로 경로 이동 `cd` 사용
+        * 최상위로 이동 : `cd ..` 
     * 3.log 확인
         * `git log` or ` git log -1 `
         * `git status`
@@ -267,6 +268,19 @@ R Scripts Memo : R Scripts 관련 메모
         * `git commit`
     * 6.Push
         * `git push origin master`
+    * 7.branch
+        * GIT에서 branch 이후 git clone 
+            * `git clone http://-----.git -b operation(branch이름) oper(생성폴더이름)/`
+            * oper폴더로 이동 : `cd oper/`
+            * 목록 확인 : `ls`
+            * 폴더가 어떤 branch를 향하고 있는지 확인 : `git branch`
+            * 전체 branch 확인 : `git branch -a`
+            * rm, cp -R 등 작업 후 커밋, 푸쉬
+                * `git commit` -> `git push origin operation`
+    * 8.ls
+        * 목록보기
+        * 숨김 파일 및 폴더 모두 확인 : `ls -ahl`
+
 * 이 페이지 참고하면 좋음 : http://rogerdudler.github.io/git-guide/index.ko.html
 
 
