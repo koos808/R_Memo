@@ -265,7 +265,7 @@ R Scripts Memo : R Scripts 관련 메모
     * 4.Add
         * `git add scripts/SFA_XGboost.R scripts/Xgboost.R`
     * 5.Commit
-        * `git commit`
+        * `git commit` : [detail NOTE] 입력 후 커밋 내용 작성
     * 6.Push
         * `git push origin master`
     * 7.branch
@@ -276,11 +276,13 @@ R Scripts Memo : R Scripts 관련 메모
             * 폴더가 어떤 branch를 향하고 있는지 확인 : `git branch`
             * 전체 branch 확인 : `git branch -a`
             * rm, cp -R 등 작업 후 커밋, 푸쉬
-                * `git commit` -> `git push origin operation`
+                * `git commit -a` (변경사항 전체 커밋), `git commit 변경파일이름1, 변경파일이름2,...` (부분 커밋)
+                * `git push origin operation(브런치 이름)`
     * 8.ls
         * 목록보기
         * 숨김 파일 및 폴더 모두 확인 : `ls -ahl`
-
+    * 9.파일 이름 및 위치 변경
+        * `mv preprocess.R preprocess2.R/`
 * 이 페이지 참고하면 좋음 : http://rogerdudler.github.io/git-guide/index.ko.html
 
 
