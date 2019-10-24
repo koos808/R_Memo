@@ -191,6 +191,9 @@ R Scripts Memo : R Scripts 관련 메모
     if(!dir.exists(file.path(paste0(out_path,STORE,"_",DC,"_",product)))) {
         dir.create(file.path(paste0(out_path,STORE,"_",DC,"_",product)),recursive = T, mode = "0777") }
     ```
+* 현재 열고 있는 Scripts path 가져오기
+    * `dirname(rstudioapi::getActiveDocumentContext()$path)`
+    * `library(rstudioapi) ; dirname(getActiveDocumentContext()$path)`
 
 *함수*
 ===
