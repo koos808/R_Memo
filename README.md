@@ -275,7 +275,8 @@ R Scripts Memo : R Scripts 관련 메모
             * 목록 확인 : `ls`
             * 폴더가 어떤 branch를 향하고 있는지 확인 : `git branch`
             * 전체 branch 확인 : `git branch -a`
-            * rm, cp -R 등 작업 후 커밋, 푸쉬
+            * add, rm, cp -R 등 작업 후 커밋, 푸쉬
+                * `git add scripts/---.R scripts/--.R`
                 * `git commit -a` (변경사항 전체 커밋), `git commit 변경파일이름1, 변경파일이름2,...` (부분 커밋)
                 * `git push origin operation(브런치 이름)`
     * 8.ls
