@@ -194,7 +194,16 @@ R Scripts Memo : R Scripts 관련 메모
 * 현재 열고 있는 Scripts path 가져오기
     * `dirname(rstudioapi::getActiveDocumentContext()$path)`
     * `library(rstudioapi) ; dirname(getActiveDocumentContext()$path)`
-
+* 패키지 확인(check)하고 없으면 설치하기
+    * 
+    ```
+    requiredPackages = c('lubridate','data.table','dplyr','zoo','ranger','reshape2',
+                         'jsonlite','cumstats','stringi')
+    for(p in requiredPackages){
+        if(!require(p,character.only = TRUE)) install.packages(p)
+        library(p,character.only = TRUE)
+        }
+    ```
 *함수*
 ===
 * sprintf() : 문자열을 매개변수 width 길이로 만들고, 빈 자리는 '0'으로 채우기
