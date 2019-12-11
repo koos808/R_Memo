@@ -276,6 +276,12 @@ R Scripts Memo : R Scripts 관련 메모
         * `git status`
     * 4.Add
         * `git add scripts/SFA_XGboost.R scripts/Xgboost.R`
+        * 여러 파일 한번에 add(추가)하기
+            * 1. `git add -i`
+            * 2. `add unstracked(4번)` 진입
+            * 3. 열개 파일 있으면 1,2,3,4,5,6,7,8,9,10 입력
+            * 4. ctrl(컨트롤)+d or ctrl(컨트롤)+c 로 나가기
+            * 정상적으로 커밋 후 푸쉬
     * 5.Commit
         * `git commit` : [detail NOTE] 입력 후 커밋 내용 작성
     * 6.Push
