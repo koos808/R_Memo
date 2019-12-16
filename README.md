@@ -239,7 +239,21 @@ R Scripts Memo : R Scripts 관련 메모
         * ex) ` ET[cola == 3] `
     * 9. Accessing columns in data.table using a character vector of column names(열 이름으로 선택)
         * `av<-grep("Fcst1",colnames(kk),value = T)` => `kk[,av,with=FALSE]`
+* SFA 계산
+    * 
+    ```
+    result_target = result_target[,c(paste0("Fcst",1:8),paste0("GapW",1:8)),with=F]
 
+    apply_Sum_target = apply(result_target[, c(grep("Fcst", colnames(result_target), value = T),
+                                            grep("Gap", colnames(result_target), value = T)), with = FALSE], 2,
+                            function(x) sum(x, na.rm = T))
+    SFA_target = c()
+    len=8
+    for(k in 1:len) { # len 예측 주차
+    SFA_target[k]  = c(1 - apply_Sum_target[k + 8] / apply_Sum_target[k])
+    }
+
+    ```
 
 *ETC*
 ===
@@ -303,10 +317,4 @@ R Scripts Memo : R Scripts 관련 메모
     * 9.파일 이름 및 위치 변경
         * `mv preprocess.R preprocess2.R/`
 * 이 페이지 참고하면 좋음 : http://rogerdudler.github.io/git-guide/index.ko.html
-
-
-
-
-
-
 
