@@ -301,6 +301,8 @@ R Scripts Memo : R Scripts 관련 메모
     * 6.Push
         * `git push origin master`
     * 7.branch
+        * branch 가져올 때 
+            * `git clone -b stage.oper(branch이름) http://----.git 생성폴더이름(안넣어도됨)`
         * GIT에서 branch 이후 git clone 
             * `git clone http://-----.git -b operation(branch이름) oper(생성폴더이름)/`
             * oper폴더로 이동 : `cd oper/`
