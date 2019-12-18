@@ -229,6 +229,7 @@ R Scripts Memo : R Scripts 관련 메모
         * ex2) double key :  `merge(set_A1, set_A2, by = c("MODEL","TIMESTAMP"), all=TRUE)`
     * 4. 정렬
         * ex) ` DT[order(cola)] `
+        * 2개 이상 `total_set[order(-score,featureset)]`
     * 5. group_by
         * ex) ` DT[, , by=cola] ` 
     * 6. mutate
