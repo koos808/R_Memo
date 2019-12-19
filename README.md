@@ -321,3 +321,14 @@ R Scripts Memo : R Scripts 관련 메모
         * `mv preprocess.R preprocess2.R/`
 * 이 페이지 참고하면 좋음 : http://rogerdudler.github.io/git-guide/index.ko.html
 
+# 파이썬 코드로 R 스크립트 실행하기
+* code
+    * 
+    ```
+    import subprocess
+
+    user_home = os.environ['user_home']
+    script_path = os.path.join(user_home,'scripts','default_model.R')
+
+    os.system(script_path)
+    ```
