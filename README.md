@@ -263,7 +263,7 @@ R Scripts Memo : R Scripts 관련 메모
     * `shell  __file__ ` or ` python "__file__" `
 * `htop` : 서버 사용량 확인
 * 커멘드로 파일 또는 폴더 지우기
-    * ` rm -r-f /home/desktop/folder/file `
+    * ` rm -r -f /home/desktop/folder/file `
 * `cd` : 경로 이동
 * sh 파일 실행
     * ` ./train.sh 20190622 20190702 12 `
