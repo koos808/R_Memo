@@ -259,3 +259,38 @@ R Scripts Memo : R Scripts 관련 메모
 *ETC2*
 ===
 
+* t 분포, z 분포 R code
+    ```
+    # z-score
+    Z<-function(mu,x,sd){
+    z.score<-(x-mu)/sd
+    return(z.score)
+    }
+    Z(172,166,6)
+
+    # z-score tail probability
+    1-pnorm(0.5,0,1)
+    1-pnorm(2,0,1)
+    pnorm(1,0,1)-0.5
+    pnorm(1.8,0,1)-0.5
+    qnorm(0.4681,0,1)
+
+    # alpha=0.05, z alpha/2 = 1.96 
+    qnorm(0.025,0,1,lower.tail = F)
+    # alpha=0.01, z alpha/2 = 2.57 
+    qnorm(0.005,0,1,lower.tail = F)
+
+    # t 분포 : t distribution
+    pt(q=1, df=1, lower.tail = TRUE)
+    qt(p=0.75, df=1, lower.tail = TRUE)
+
+    qt(p=0.05, df=10, lower.tail = F)
+    qt(p=0.01, df=10, lower.tail = F)
+
+    # 90% 신뢰구간 : alpha 0.1
+    qt(p=0.1/2, df=82, lower.tail = F)
+    # 95% 신뢰구간 : alpha 0.05
+    qt(p=0.05/2, df=82, lower.tail = F)
+    # 99% 신뢰구간 : alpha 0.01
+    qt(p=0.01/2, df=82, lower.tail = F)
+    ```
