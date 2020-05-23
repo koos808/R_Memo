@@ -307,4 +307,10 @@ R Scripts Memo : R Scripts 관련 메모
     qt(p=0.05, df=82, lower.tail = F)
     # 99% 신뢰구간 : alpha 0.01 ::: one-tailed test(단측검정)
     qt(p=0.01, df=82, lower.tail = F)
+
+    # F 분포 :  F-test
+    # 95% 신뢰구간 : alpha 0.05 ::: one-tailed test(단측검정)
+    qf(p=0.95, df1=15, df2=30, lower.tail = TRUE) # F-critical Value
+
+    pf(q=0.5, df1=30, df2=40, lower.tail = TRUE)
     ```
