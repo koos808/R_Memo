@@ -302,9 +302,9 @@ R Scripts Memo : R Scripts 관련 메모
     qt(p=0.01/2, df=82, lower.tail = F)
 
     # 90% 신뢰구간 : alpha 0.1 ::: one-tailed test(단측검정)
-    qt(p=0.1/2, df=82, lower.tail = F)
+    qt(p=0.1, df=82, lower.tail = F)
     # 95% 신뢰구간 : alpha 0.05 ::: one-tailed test(단측검정)
-    qt(p=0.05/2, df=82, lower.tail = F)
+    qt(p=0.05, df=82, lower.tail = F)
     # 99% 신뢰구간 : alpha 0.01 ::: one-tailed test(단측검정)
-    qt(p=0.01/2, df=82, lower.tail = F)
+    qt(p=0.01, df=82, lower.tail = F)
     ```
