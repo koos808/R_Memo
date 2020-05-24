@@ -313,4 +313,10 @@ R Scripts Memo : R Scripts 관련 메모
     qf(p=0.95, df1=15, df2=30, lower.tail = TRUE) # F-critical Value
 
     pf(q=0.5, df1=30, df2=40, lower.tail = TRUE)
+
+    # 카이제곱 분포 : Chi-square test : x^2 distribution table
+    # 95% 신뢰구간 : alpha 0.05 ::: two-tailed test(양측검정)
+    qchisq(p=0.05, df=1, lower.tail = F)
+    # 99% 신뢰구간 : alpha 0.01 ::: two-tailed test(양측검정)
+    qchisq(p=0.01, df=1, lower.tail = F)
     ```
