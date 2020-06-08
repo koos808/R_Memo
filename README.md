@@ -31,7 +31,9 @@ R Scripts Memo : R Scripts 관련 메모
     arrange(data,v1) # v1 기준으로 data 오름차순
     arrange(data,desc(v1)) # v1 기준으로 data 내림차순
     ```
-
+* 나누기, 몫 계산하기
+  * 몫 : `%/%`
+  * 나머지 : `%%`
 * Not in <-> %in% 의 반대
     * 1 : ``` `%not_in%` <- purrr::negate(`%in%`) ```
     * 2 : ` setdiff(D1, D0) `
