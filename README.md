@@ -8,6 +8,16 @@ R Scripts Memo : R Scripts 관련 메모
 *Code*
 ===
 * rm(list=ls()) : 모든 변수 삭제
+* 열이름으로 열(컬럼) 제거
+    * ex1) `val[,colnames(val)!='bbox']`
+    * ex2) `subset(val, select = -bbox)`
+* 모든 열(컬럼) 타입 변경하기
+    ```    
+    kkk = c(3,4,5,6)
+    for(i in kkk){
+    val[,i]<-as.character(val[,i])
+    }
+    ```
 * NA(결측치)가 N/A로 character로 들어가있는 경우
     * "N/A" 문자 포함된 행 모두 제거
     ```
@@ -59,6 +69,8 @@ R Scripts Memo : R Scripts 관련 메모
     * ` grep() ` : 문자 조건에 맞춰 추출
         * ex) ``` grep(kkk[1],list1,value=T) # list1[grepl(kkk[1],list1)] ```
         * 조건에 해당하는 문자만 반환
+    * 특수 문제 제거
+        * `(` 문자 제거 : `gsub('[(]', '', train$bbox[1])`
 
 * 결측값(NA, NAN) 처리
     * 예시 Code 1
@@ -138,7 +150,8 @@ R Scripts Memo : R Scripts 관련 메모
         ```
 
     * Short version.2
-        ` colsplit(data_with_info$SKU, "\\.", names = c("ITEM", "suffix"))[,1] `
+        * `library(reshape2)`
+        * `colsplit(data_with_info$SKU, "\\.", names = c("ITEM", "suffix"))[,1]`
 
 * 문자열 대소문자, 일괄 바꾸기
     * 
