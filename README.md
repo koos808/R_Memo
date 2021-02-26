@@ -71,7 +71,7 @@ R Scripts Memo : R Scripts 관련 메모
     * ` grep() ` : 문자 조건에 맞춰 추출
         * ex) ``` grep(kkk[1],list1,value=T) # list1[grepl(kkk[1],list1)] ```
         * 조건에 해당하는 문자만 반환
-    * 특수 문제 제거
+    * 특수 문자 제거
         * `(` 문자 제거 : `gsub('[(]', '', train$bbox[1])`
 
 * 결측값(NA, NAN) 처리
