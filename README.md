@@ -119,20 +119,22 @@ R Scripts Memo : R Scripts 관련 메모
         ```
 
 * GGplot 혹은 R Plot 결과 pdf로 저장하기
-    * 
+  * 1) pdf() 함수로 저장 경로에 저장할 파일로 연결해줍니다.
+  * 1) for문을 이용해 저장할 plot을 모두 출력했다면 dev.off() 함수로 파일 연결 끊기
+  * 
     ```
     pdf(paste0("C:/Users/NURI-0022/Documents/JM/NL_product_predict/",model_flag[i],".pdf"),width = 12,height = 10)
     
     for(j in 1:length(item_li)){
-  
-  print(melt(dat_2018 , id.vars = c("ITEM","Fcst_month") , measure.vars =  c("Fcst","ACT")) %>%
-          filter(ITEM == item_li[j]) %>%
-          ggplot(aes(x=Fcst_month,y=value,group=variable,colour=variable))+
-          geom_line()+
-          theme(axis.text.x = element_text(angle=45 , hjust = 1 , size = 10))+
-          ggtitle(item_li[j]))
-          
-          }
+        print(
+            melt(dat_2018 , id.vars = c("ITEM","Fcst_month") , measure.vars =  c("Fcst","ACT")) %>% 
+            filter(ITEM == item_li[j]) %>%
+            ggplot(aes(x=Fcst_month,y=value,group=variable,colour=variable))+
+            geom_line()+
+            theme(axis.text.x = element_text(angle=45 , hjust = 1 , size = 10))+
+            ggtitle(item_li[j])
+            )
+        }
     dev.off()
     ```
 
